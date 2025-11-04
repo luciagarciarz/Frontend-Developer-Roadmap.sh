@@ -51,12 +51,17 @@
         .title-section h1 {
             font-family: 'Schoolbell', cursive;
             font-size: 48px;
-            margin: 10px 0;
+            margin: 50px 0 10px 0;
+        }
+        
+        .title-section p {
+            margin-bottom: 60px;
+            color: #666666;
         }
         
         h3 {
             font-family: 'Schoolbell', cursive;
-            font-size: 24px;
+            font-size: 18px;
             margin: 10px 0;
         }
         
@@ -72,14 +77,51 @@
             vertical-align: top;
         }
         
-        .projects-table {
-            width: 100%;
-            border-collapse: collapse;
+        .projects-list {
+            margin-top: 10px;
         }
         
-        .projects-table td {
-            border: 1px solid black;
-            padding: 8px;
+        .projects-list p {
+            padding: 10px 15px;
+            margin: 0 -15px;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        
+        .projects-list p:last-child {
+            border-bottom: none;
+        }
+        
+        .work-experience-item {
+            margin: 0 -15px;
+            border-bottom: 2px solid black;
+        }
+        
+        .work-experience-item:first-of-type {
+            padding: 0 15px 18px 15px;
+            margin-top: 15px;
+        }
+        
+        .work-experience-item:last-child {
+            padding: 18px 15px 10px 15px;
+            border-bottom: none;
+        }
+        
+        .work-experience-item h4 {
+            margin: 0;
+        }
+        
+        .work-experience-item:first-of-type h4 {
+            margin: 0 !important;
+            padding-top: 0 !important;
+            margin-top: -8px !important;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .work-experience-item h4 {
+            font-family: 'Schoolbell', cursive;
+            font-size: 18px;
         }
         
         .reviews-section {
@@ -97,17 +139,30 @@
         .review-card {
             border: 1px solid black;
             padding: 15px;
+            border-radius: 15px;
         }
         
         .footer {
             text-align: center;
             padding: 20px;
-            border: 1px solid black;
+            border: none;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            font-family: 'Schoolbell', cursive;
+            font-size: 18px;
         }
         
         ul {
             margin: 10px 0;
             padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        ul li::before {
+            content: "- ";
+            margin-right: 5px;
         }
         
         h1, h3, h4 {
@@ -146,33 +201,37 @@
             <!-- Projects Column -->
             <div class="column">
                 <h3>Projects</h3>
-                <table class="projects-table">
-                    <tr><td>HTML Only Portfolio</td></tr>
-                    <tr><td>Calculator</td></tr>
-                    <tr><td>Quiz App</td></tr>
-                    <tr><td>Countdown Timer</td></tr>
-                    <tr><td>Product Upcoming Page</td></tr>
-                </table>
+                <div class="projects-list">
+                    <p>HTML Only Portfolio</p>
+                    <p>Calculator</p>
+                    <p>Quiz App</p>
+                    <p>Countdown Timer</p>
+                    <p>Product Upcoming Page</p>
+                </div>
             </div>
 
             <!-- Work Experience Column -->
             <div class="column">
                 <h3>Work Experience</h3>
-                <h4>roadmap.sh</h4>
-                <p>Solved all the frontend projects</p>
-                <p><a href="#">Visit my Profile</a></p>
+                <div class="work-experience-item">
+                    <h4>roadmap.sh</h4>
+                    <p>Solved all the frontend projects</p>
+                    <p><a href="#">Visit my Profile</a></p>
+                </div>
                 
-                <h4>OpenSource Work</h4>
-                <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
-                <p><a href="#">Visit my GitHub Profile</a></p>
+                <div class="work-experience-item">
+                    <h4>OpenSource Work</h4>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                    <p><a href="#">Visit my GitHub Profile</a></p>
+                </div>
             </div>
 
             <!-- Education Column -->
             <div class="column">
                 <h3>Education</h3>
-                <p><strong>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</strong></p>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
                 
-                <p><strong>Courses I took:</strong></p>
+                <p>Courses I took:</p>
                 <ul>
                     <li>Object Oriented Programming</li>
                     <li>Data Structures and Algorithms</li>
