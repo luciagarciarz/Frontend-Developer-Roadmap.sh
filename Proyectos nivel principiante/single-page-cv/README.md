@@ -1,1 +1,1 @@
-Mi solución al proyecto https://roadmap.sh/projects/single-page-cv
+Compara mi código con el resultado final en https://roadmap.sh/projects/single-page-cv
