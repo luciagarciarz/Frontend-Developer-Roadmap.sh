@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Frontend Developer Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+            border: 1px solid black;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .content {
+            padding: 30px;
+            border: 1px solid black;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <strong>■ your name</strong>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a> / 
+                <a href="projects.html">Projects</a> / 
+                <a href="articles.html">Articles</a> / 
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>My Projects</h1>
+            <p>Here are some of the projects I've worked on:</p>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>HTML Only Portfolio</h3>
+                    <p>A clean portfolio website built using only HTML and CSS, showcasing modern web development practices.</p>
+                    <p><strong>Technologies:</strong> HTML5, CSS3</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Calculator</h3>
+                    <p>A functional calculator application with a user-friendly interface and basic arithmetic operations.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Quiz App</h3>
+                    <p>An interactive quiz application with multiple choice questions and score tracking.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Countdown Timer</h3>
+                    <p>A customizable countdown timer for events, deadlines, and special occasions.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Product Upcoming Page</h3>
+                    <p>A landing page for upcoming product launches with email subscription functionality.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            
+            <p><a href="index.html">← Back to Main Portfolio</a></p>
+        </div>
+    </div>
+</body>
+</html>
