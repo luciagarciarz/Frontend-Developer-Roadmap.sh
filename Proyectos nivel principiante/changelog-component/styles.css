@@ -1,0 +1,185 @@
+/* Reset de estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiente púrpura de fondo */
+    min-height: 100vh; /* Altura mínima de la pantalla completa */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    padding: 20px;
+}
+
+/* Contenedor principal del changelog */
+.changelog-container {
+    background: white;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Sombra profunda para efecto de elevación */
+    max-width: 700px;
+    width: 100%;
+    padding: 50px 40px;
+    margin: 20px;
+}
+
+/* Sección de encabezado del changelog */
+.changelog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Título principal */
+.changelog-header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Subtítulo o descripción */
+.changelog-header p {
+    color: #999;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Línea vertical de la timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #e0e0e0; /* Línea gris clara */
+}
+
+/* Cada elemento individual de la timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
+/* Elimina el margen del último elemento */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Punto circular en la línea de tiempo */
+.timeline-dot {
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: #1a1a1a; /* Fondo negro */
+    border-radius: 50%; /* Forma circular */
+    border: 3px solid white; /* Borde blanco */
+    box-shadow: 0 0 0 2px #1a1a1a; /* Anillo exterior negro */
+    z-index: 1; /* Mantiene el punto por encima de la línea */
+}
+
+/* Fecha del evento en la timeline */
+.timeline-date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 400;
+}
+
+/* Contenido de texto del evento */
+.timeline-content {
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Efecto hover: cambia el color del texto */
+.timeline-item:hover .timeline-content {
+    color: #667eea; /* Color púrpura al pasar el mouse */
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover: anima el punto de la timeline */
+.timeline-item:hover .timeline-dot {
+    background: #667eea;
+    box-shadow: 0 0 0 2px #667eea, 0 0 10px rgba(102, 126, 234, 0.5); /* Añade brillo */
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets y pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+    .changelog-container {
+        padding: 40px 25px; /* Reduce el padding */
+    }
+
+    .changelog-header h1 {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    .changelog-header p {
+        font-size: 0.9rem;
+    }
+
+    .timeline {
+        padding-left: 30px; /* Reduce el espacio izquierdo */
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -23px; /* Ajusta la posición del punto */
+    }
+
+    .timeline-content {
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles y pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .changelog-container {
+        padding: 30px 20px; /* Padding aún más reducido */
+        margin: 10px;
+    }
+
+    .changelog-header h1 {
+        font-size: 1.75rem; /* Título más pequeño para móvil */
+    }
+
+    .changelog-header {
+        margin-bottom: 40px;
+    }
+
+    .timeline-item {
+        margin-bottom: 30px; /* Menos espacio entre elementos */
+    }
+
+    .timeline-date {
+        font-size: 0.85rem;
+    }
+
+    .timeline-content {
+        font-size: 0.9rem;
+    }
+}
