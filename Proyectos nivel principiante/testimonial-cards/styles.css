@@ -1,0 +1,391 @@
+/* ===================================
+   ESTILOS GENERALES Y RESET
+   =================================== */
+
+/* Reset de márgenes y padding, y configuración de box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del body con fondo claro y fuente sans-serif */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   CONTENEDOR PRINCIPAL
+   =================================== */
+
+/* Contenedor principal que centra todo el contenido */
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   GRID DE TARJETAS
+   =================================== */
+
+/* Grid principal que organiza las 4 tarjetas en 2 filas y 2 columnas */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+/* ===================================
+   ESTILOS BASE DE TARJETAS
+   =================================== */
+
+/* Estilos comunes para todas las tarjetas de testimonios */
+.testimonial-card {
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos del texto del testimonio */
+.testimonial-text p {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* Texto destacado dentro del testimonio */
+.testimonial-text .highlight {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* ===================================
+   TARJETA OSCURA (Tarjeta 1)
+   =================================== */
+
+/* Tarjeta con fondo negro en la esquina superior izquierda */
+.dark-card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Ajuste de margen inferior del texto en tarjeta oscura */
+.dark-card .testimonial-text {
+    margin-bottom: 20px;
+}
+
+/* ===================================
+   TARJETA CLARA (Tarjeta 2)
+   =================================== */
+
+/* Tarjeta con fondo blanco y borde en la esquina superior derecha */
+.light-card {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+}
+
+/* Ajuste de margen inferior del texto en tarjeta clara */
+.light-card .testimonial-text {
+    margin-bottom: 20px;
+}
+
+/* ===================================
+   INFORMACIÓN DEL AUTOR (Tarjetas 1 y 2)
+   =================================== */
+
+/* Contenedor que agrupa foto y detalles del autor */
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+/* Foto circular del autor */
+.author-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contenedor de los detalles textuales del autor */
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nombre del autor */
+.author-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* Título o cargo del autor */
+.author-title {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Color del título en tarjeta oscura */
+.dark-card .author-title {
+    color: #b0b0b0;
+}
+
+/* Color del título en tarjeta clara */
+.light-card .author-title {
+    color: #666666;
+}
+
+/* ===================================
+   TARJETA CON IMAGEN GRANDE (Tarjeta 3)
+   =================================== */
+
+/* Tarjeta con imagen grande a la izquierda - esquina inferior izquierda */
+.large-image-card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Contenedor de la imagen grande del autor */
+.large-author-image {
+    width: 40%;
+    min-height: 100%;
+}
+
+/* Imagen grande del autor que ocupa todo el contenedor */
+.large-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor del contenido textual de la tarjeta grande */
+.large-card-content {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ===================================
+   SISTEMA DE CALIFICACIÓN (Tarjeta 3)
+   =================================== */
+
+/* Contenedor de las estrellas de calificación */
+.rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Cada estrella individual */
+.star {
+    color: #ffd700;
+}
+
+/* ===================================
+   ENCABEZADO DEL AUTOR (Tarjeta 3)
+   =================================== */
+
+/* Contenedor del nombre y título en la tarjeta grande */
+.author-header {
+    margin-bottom: 15px;
+}
+
+/* Nombre del autor en la tarjeta grande */
+.author-header .author-name {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* Título del autor en la tarjeta grande */
+.author-header .author-title {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* ===================================
+   TARJETA CON CARRUSEL (Tarjeta 4)
+   =================================== */
+
+/* Tarjeta con carrusel de avatares - esquina inferior derecha */
+.carousel-card {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+}
+
+/* Ajuste de margen inferior del texto en tarjeta de carrusel */
+.carousel-card .testimonial-text {
+    margin-bottom: 25px;
+}
+
+/* ===================================
+   COMPONENTE CARRUSEL
+   =================================== */
+
+/* Contenedor principal del carrusel con navegación */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de los avatares del carrusel */
+.carousel-avatars {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Cada avatar individual en el carrusel */
+.carousel-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Avatar activo en el carrusel - más grande y opaco */
+.carousel-avatar.active {
+    opacity: 1;
+    width: 55px;
+    height: 55px;
+    border: 3px solid #333333;
+}
+
+/* Efecto hover en los avatares */
+.carousel-avatar:hover {
+    opacity: 0.7;
+}
+
+/* ===================================
+   BOTONES DE NAVEGACIÓN DEL CARRUSEL
+   =================================== */
+
+/* Estilo base de los botones de navegación */
+.carousel-btn {
+    background-color: transparent;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en los botones de navegación */
+.carousel-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #999999;
+}
+
+/* ===================================
+   AUTOR DEL CARRUSEL
+   =================================== */
+
+/* Contenedor del nombre del autor debajo del carrusel */
+.carousel-author {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Nombre del autor en la tarjeta de carrusel */
+.carousel-author .author-name {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Diseño para tablets - ajuste del grid a 1 columna para tarjetas 3 y 4 */
+@media (max-width: 968px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* La tarjeta con imagen grande mantiene su diseño horizontal en tablets */
+    .large-image-card {
+        flex-direction: row;
+    }
+}
+
+/* Diseño para móviles - todas las tarjetas a 1 columna */
+@media (max-width: 640px) {
+    /* Ajuste del padding del body */
+    body {
+        padding: 20px 10px;
+    }
+    
+    /* Grid de una sola columna */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Reducción del padding de las tarjetas */
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    /* La tarjeta con imagen grande cambia a disposición vertical */
+    .large-image-card {
+        flex-direction: column;
+    }
+    
+    /* La imagen ocupa todo el ancho */
+    .large-author-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    /* El contenido ocupa todo el ancho */
+    .large-card-content {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    /* Reducción del tamaño de los avatares en móvil */
+    .carousel-avatar {
+        width: 38px;
+        height: 38px;
+    }
+    
+    /* Avatar activo más pequeño en móvil */
+    .carousel-avatar.active {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Reducción del tamaño de fuente en móvil */
+    .testimonial-text p {
+        font-size: 14px;
+    }
+}
