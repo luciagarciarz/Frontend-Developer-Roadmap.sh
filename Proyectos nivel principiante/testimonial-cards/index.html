@@ -13,12 +13,14 @@
         <!-- Grid de tarjetas de testimonios - Sección superior con 4 tarjetas -->
         <div class="testimonials-grid">
             
-            <!-- Tarjeta 1: Tarjeta oscura con foto a la izquierda (Artem Jones - Junior Frontend Developer) -->
-            <div class="testimonial-card dark-card">
-                <!-- Contenedor del texto del testimonio -->
-                <div class="testimonial-text">
-                    <p>I have been solving all the project ideas on roadmap.sh and I am surprised how far I have come from where I started.</p>
-                    <p class="highlight">Highly recommended!</p>
+            <!-- Tarjeta 1: Tarjeta con bocadillo negro (Artem Jones - Junior Frontend Developer) -->
+            <div class="testimonial-card speech-bubble-card">
+                <!-- Bocadillo de texto con fondo negro -->
+                <div class="speech-bubble">
+                    <div class="testimonial-text">
+                        <p>I have been solving all the project ideas on roadmap.sh and I am surprised how far I have come from where I started.</p>
+                        <p class="highlight">Highly recommended!</p>
+                    </div>
                 </div>
                 <!-- Contenedor de información del autor con foto y datos -->
                 <div class="author-info">
@@ -46,34 +48,57 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 3: Tarjeta con imagen grande a la izquierda (Jackie Mackle - Engineering Manager) -->
-            <div class="testimonial-card large-image-card">
-                <!-- Contenedor de la imagen grande del autor -->
-                <div class="large-author-image">
-                    <img src="https://i.pravatar.cc/300?img=47" alt="Jackie Mackle">
+            <!-- Imagen suelta de Jackie Mackle -->
+            <div class="author-image-standalone">
+                <img src="https://i.pravatar.cc/300?img=47" alt="Jackie Mackle">
+            </div>
+
+            <!-- Tarjeta 3: Tarjeta solo con contenido (Jackie Mackle - Engineering Manager) -->
+            <div class="testimonial-card vertical-card">
+                <!-- Estrellas de calificación -->
+                <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
                 </div>
-                <!-- Contenedor del contenido (texto y autor) -->
-                <div class="large-card-content">
-                    <!-- Estrellas de calificación -->
-                    <div class="rating">
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                        <span class="star">⭐</span>
-                    </div>
-                    <!-- Nombre y título del autor -->
-                    <div class="author-header">
-                        <h3 class="author-name">Jackie Mackle</h3>
-                        <p class="author-title">Engineering Manager</p>
-                    </div>
-                    <!-- Texto del testimonio -->
-                    <div class="testimonial-text">
-                        <p>I find myself recommending roadmap.sh to all the internees or junior developers. It's a great way to skill up and grow in your career.</p>
-                    </div>
+                <!-- Nombre y título del autor -->
+                <div class="author-header">
+                    <h3 class="author-name">Jackie Mackle</h3>
+                    <p class="author-title">Engineering Manager</p>
+                </div>
+                <!-- Texto del testimonio -->
+                <div class="testimonial-text">
+                    <p>I find myself recommending roadmap.sh to all the internees or junior developers. It's a great way to skill up and grow in your career.</p>
                 </div>
             </div>
 
+        </div>
+
+        <!-- Tarjeta con carrusel debajo del grid principal (Artem Jones) -->
+        <div class="testimonial-card carousel-card-bottom">
+            <!-- Contenedor del texto del testimonio -->
+            <div class="testimonial-text">
+                <p>roadmap.sh is an incredible resource. I was fortunate to discover it during my university days in 2018. Back then, it was just a single repository with three images. It's amazing to see how much impact it has had on millions of lives since then.</p>
+            </div>
+            <!-- Carrusel de avatares con navegación -->
+            <div class="carousel">
+                <!-- Botón de navegación izquierda -->
+                <button class="carousel-btn prev-btn" aria-label="Previous">‹</button>
+                <!-- Contenedor de avatares -->
+                <div class="carousel-avatars">
+                    <img src="https://i.pravatar.cc/60?img=14" alt="Avatar 1" class="carousel-avatar">
+                    <img src="https://i.pravatar.cc/60?img=12" alt="Avatar 2" class="carousel-avatar active">
+                    <img src="https://i.pravatar.cc/60?img=15" alt="Avatar 3" class="carousel-avatar">
+                </div>
+                <!-- Botón de navegación derecha -->
+                <button class="carousel-btn next-btn" aria-label="Next">›</button>
+            </div>
+            <!-- Nombre del autor debajo del carrusel -->
+            <div class="carousel-author">
+                <h3 class="author-name">Artem Jones</h3>
+            </div>
         </div>
     </div>
 </body>

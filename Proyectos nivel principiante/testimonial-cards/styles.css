@@ -66,29 +66,58 @@ body {
 }
 
 /* ===================================
-   TARJETA OSCURA (Tarjeta 1)
+   TARJETA CON BOCADILLO (Tarjeta 1)
    =================================== */
 
-/* Tarjeta con fondo negro en la esquina superior izquierda */
-.dark-card {
-    background-color: #1a1a1a;
-    color: #ffffff;
+/* Tarjeta con bocadillo de texto en la esquina superior izquierda */
+.speech-bubble-card {
+    background-color: transparent;
+    color: #333333;
 }
 
-/* Ajuste de margen inferior del texto en tarjeta oscura */
-.dark-card .testimonial-text {
+/* Bocadillo de texto con fondo negro y triángulo */
+.speech-bubble {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+/* Triángulo del bocadillo apuntando hacia abajo */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #1a1a1a;
+}
+
+/* Ajuste del texto dentro del bocadillo */
+.speech-bubble .testimonial-text p {
+    margin-bottom: 12px;
+}
+
+/* Texto destacado en el bocadillo */
+.speech-bubble .highlight {
+    font-weight: 600;
+    margin-top: 8px;
 }
 
 /* ===================================
    TARJETA CLARA (Tarjeta 2)
    =================================== */
 
-/* Tarjeta con fondo blanco y borde en la esquina superior derecha */
+/* Tarjeta con fondo blanco y borde negro en la esquina superior derecha */
 .light-card {
     background-color: #ffffff;
     color: #333333;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #000000;
 }
 
 /* Ajuste de margen inferior del texto en tarjeta clara */
@@ -106,6 +135,11 @@ body {
     align-items: center;
     gap: 15px;
     margin-top: auto;
+}
+
+/* Desplazamiento específico para la tarjeta con bocadillo */
+.speech-bubble-card .author-info {
+    padding-left: 15px;
 }
 
 /* Foto circular del autor */
@@ -135,50 +169,39 @@ body {
     opacity: 0.8;
 }
 
-/* Color del título en tarjeta oscura */
-.dark-card .author-title {
-    color: #b0b0b0;
-}
-
 /* Color del título en tarjeta clara */
 .light-card .author-title {
     color: #666666;
 }
 
 /* ===================================
-   TARJETA CON IMAGEN GRANDE (Tarjeta 3)
+   IMAGEN SUELTA DE AUTOR
    =================================== */
 
-/* Tarjeta con imagen grande a la izquierda - esquina inferior izquierda */
-.large-image-card {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    flex-direction: row;
-    gap: 0;
-    padding: 0;
+/* Imagen suelta sin tarjeta - posicionada en el grid */
+.author-image-standalone {
+    border-radius: 12px;
     overflow: hidden;
+    aspect-ratio: 2 / 1;
 }
 
-/* Contenedor de la imagen grande del autor */
-.large-author-image {
-    width: 40%;
-    min-height: 100%;
-}
-
-/* Imagen grande del autor que ocupa todo el contenedor */
-.large-author-image img {
+/* Imagen que ocupa todo el contenedor */
+.author-image-standalone img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* Contenedor del contenido textual de la tarjeta grande */
-.large-card-content {
-    width: 60%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* ===================================
+   TARJETA VERTICAL (Tarjeta 3)
+   =================================== */
+
+/* Tarjeta con contenido vertical sin imagen - fondo oscuro */
+.vertical-card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    aspect-ratio: 2 / 1;
 }
 
 /* ===================================
@@ -220,19 +243,25 @@ body {
 }
 
 /* ===================================
-   TARJETA CON CARRUSEL (Tarjeta 4)
+   TARJETA CON CARRUSEL INFERIOR
    =================================== */
 
-/* Tarjeta con carrusel de avatares - esquina inferior derecha */
-.carousel-card {
+/* Tarjeta con carrusel debajo del grid principal */
+.carousel-card-bottom {
     background-color: #ffffff;
     color: #333333;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
 }
 
 /* Ajuste de margen inferior del texto en tarjeta de carrusel */
-.carousel-card .testimonial-text {
+.carousel-card-bottom .testimonial-text {
     margin-bottom: 25px;
+    text-align: center;
 }
 
 /* ===================================
@@ -330,11 +359,6 @@ body {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    
-    /* La tarjeta con imagen grande mantiene su diseño horizontal en tablets */
-    .large-image-card {
-        flex-direction: row;
-    }
 }
 
 /* Diseño para móviles - todas las tarjetas a 1 columna */
@@ -352,23 +376,6 @@ body {
     
     /* Reducción del padding de las tarjetas */
     .testimonial-card {
-        padding: 20px;
-    }
-    
-    /* La tarjeta con imagen grande cambia a disposición vertical */
-    .large-image-card {
-        flex-direction: column;
-    }
-    
-    /* La imagen ocupa todo el ancho */
-    .large-author-image {
-        width: 100%;
-        height: 200px;
-    }
-    
-    /* El contenido ocupa todo el ancho */
-    .large-card-content {
-        width: 100%;
         padding: 20px;
     }
     
